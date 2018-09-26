@@ -17,6 +17,7 @@
         <label>Your Pet's Name:
             <input type='text' name='petName'>
         </label>
+
         <label for='size'>Select Your Pet's Size:</label>
         <select name='size' id='size'>
             <option value='choose'>Choose one...</option>
@@ -27,7 +28,8 @@
             <option value='100'>81-100lbs.</option>
             <option value='101'>Over 100lbs.</option>
         </select>
-        <label>Your Pet's Age:</label>
+
+        <label class='age'>Your Pet's Age:</label>
             <ul>
                 <li>
                     <label><input type='checkbox' name='petAge'> Puppy</label>
@@ -39,6 +41,7 @@
                     <label><input type='checkbox' name='petAge'> Senior</label>
                 </li>
             </ul>
+            <input type='submit' value='Enter' id='submit'>
 
     </form>
 
