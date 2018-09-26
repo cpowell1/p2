@@ -9,12 +9,14 @@
 </head>
 
 <body>
+<div class='container'>
+<img src='/images/nutro.png' alt='Dog Food' />
 <h1>Nutro Dog Food Calculator</h1>
 
 <form method='' action=''>
 
 </form>
 
-
+</div>
 </body>
 </html>
