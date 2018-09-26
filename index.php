@@ -18,9 +18,9 @@ require 'logic.php'
     <img src='/images/nutro.png' alt='Dog Food'/>
     <h1>Nutro Dog Food Calculator</h1>
 
-    <form method='Get' action='calculate.php'>
+    <form method='GET' action='calculate.php'>
         <label>Your Pet's Name:
-            <input type='text' name='petName'>
+            <input type='text' name='petName' value='<?php $petName ?>'>
         </label>
 
         <label for='size'>Select Your Pet's Size:</label>
@@ -36,20 +36,30 @@ require 'logic.php'
         </select>
 
         <label class='age'>Your Pet's Age:</label>
-            <ul>
-                <li>
-                    <label><input type='checkbox' name='petAge'> Puppy</label>
-                </li>
-                <li>
-                    <label><input type='checkbox' name='petAge'> Adult</label>
-                </li>
-                <li>
-                    <label><input type='checkbox' name='petAge'> Senior</label>
-                </li>
-            </ul>
-            <input type='submit' value='Enter' id='submit'>
+        <ul>
+            <li>
+                <label><input type='checkbox' name='petAge'> Puppy</label>
+            </li>
+            <li>
+                <label><input type='checkbox' name='petAge'> Adult</label>
+            </li>
+            <li>
+                <label><input type='checkbox' name='petAge'> Senior</label>
+            </li>
+        </ul>
+        <input type='submit' value='Enter' id='submit'>
 
     </form>
+
+    <div id='results'>
+        <?php if (isset($petName)): ?>
+            <div class='alert' role='alert'>
+                <p><?= $petName ?> is a <?php $petAge ?>, and he/she needs <?php $foodAmount ?> cups of food per day.</p>
+            </div>
+        <?php endif; ?>
+    </div>
+
+
 
 </div>
 </body>
