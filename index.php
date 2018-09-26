@@ -5,6 +5,7 @@
     <title>Nutro Dog Food Calculator</title>
     <meta charset="utf-8">
     <link href='style.css' rel='stylesheet'>
+    <link href="https://fonts.googleapis.com/css?family=Arvo" rel="stylesheet">
 
 </head>
 
