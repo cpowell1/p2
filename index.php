@@ -1,3 +1,7 @@
+<?php
+require 'logic.php'
+?>
+
 <!doctype html>
 
 <html lang="en">
@@ -24,6 +28,7 @@
             <option value='choose'>Choose one...</option>
             <option value='15'>Up to 15 lbs.</option>
             <option value='25'>16-25lbs.</option>
+            <option value='40'>26-40lbs.</option>
             <option value='60'>41-60lbs.</option>
             <option value='80'>61-80lbs.</option>
             <option value='100'>81-100lbs.</option>
