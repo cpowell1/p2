@@ -26,7 +26,7 @@ require 'logic.php'
         <label for='size'>Select Your Pet's Size:</label>
         <select name='size' id='size'>
             <option value='choose'>Choose one...</option>
-            <option value='Up to 15'>up to 15 lbs.</option>
+            <option value='up to 15'>up to 15 lbs.</option>
             <option value='16-25'>16-25lbs.</option>
             <option value='26-40'>26-40lbs.</option>
             <option value='41-60'>41-60lbs.</option>
@@ -53,9 +53,94 @@ require 'logic.php'
 
     <div id='results'>
         <?php if (isset($petName, $size, $petAge)): ?>
-            <div class='alert' role='alert'>
-                <p><?= $petName ?>  is a <?= $petAge ?> and is <?= $size ?> pounds. He/she needs <?= $foodAmount ?> cups per day.</p>
-        <?php endif; ?>
+        <div class='alert' role='alert'>
+            <p><?= $petName ?> is a <?= $petAge ?> and is <?= $size ?> pounds.</p>
+            <?php endif; ?>
+
+            <?php
+            if ($petAge == 'Puppy') {
+                if (isset($size)) {
+                    switch ($size) {
+                        case 'up to 15' :
+                            $result = '1/2 cups';
+                            break;
+                        case '16-25' :
+                            $result = '1.5 cups';
+                            break;
+                        case '26-40' :
+                            $result = '2 cups';
+                            break;
+                        case '41-60' :
+                            $result = '2.5 cups';
+                            break;
+                        case '61-80' :
+                            $result = '3 cups';
+                            break;
+                        case '81-100' :
+                            $result = '3.5 cups';
+                            break;
+                        case '100+' :
+                            $result = '4.5 cups';
+                            break;
+                    }
+                    echo("$petName needs $result per day.");
+                }
+            } elseif ($petAge == 'Adult') {
+                if (isset($size)) {
+                    switch ($size) {
+                        case 'up to 15' :
+                            $result = '1 cups';
+                            break;
+                        case '16-25' :
+                            $result = '1.5 cups';
+                            break;
+                        case '26-40' :
+                            $result = '2 cups';
+                            break;
+                        case '41-60' :
+                            $result = '2.5 cups';
+                            break;
+                        case '61-80' :
+                            $result = '3 cups';
+                            break;
+                        case '81-100' :
+                            $result = '3.5 cups';
+                            break;
+                        case '100+' :
+                            $result = '5 cups';
+                            break;
+                    }
+                    echo("$petName needs $result per day.");
+                }
+            } else {
+                if (isset($size)) {
+                    switch ($size) {
+                        case 'up to 15' :
+                            $result = '1/2 cups';
+                            break;
+                        case '16-25' :
+                            $result = '1 cups';
+                            break;
+                        case '26-40' :
+                            $result = '1.5 cups';
+                            break;
+                        case '41-60' :
+                            $result = '2 cups';
+                            break;
+                        case '61-80' :
+                            $result = '3 cups';
+                            break;
+                        case '81-100' :
+                            $result = '5 cups';
+                            break;
+                        case '100+' :
+                            $result = '5.5 cups';
+                            break;
+                    }
+                    echo("$petName needs $result per day.");
+                }
+            } ?>
+
 
 
 
