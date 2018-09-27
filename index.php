@@ -26,25 +26,25 @@ require 'logic.php'
         <label for='size'>Select Your Pet's Size:</label>
         <select name='size' id='size'>
             <option value='choose'>Choose one...</option>
-            <option value='Up to 15' <?php if ($size == '15') echo 'selected'?>>Up to 15 lbs.</option>
-            <option value='16-25' <?php if ($size == '25') echo 'selected'?>>16-25lbs.</option>
-            <option value='26-40' <?php if ($size == '40') echo 'selected'?>>26-40lbs.</option>
-            <option value='41-60' <?php if ($size == '60') echo 'selected'?>>41-60lbs.</option>
-            <option value='61-80' <?php if ($size == '80') echo 'selected'?>>61-80lbs.</option>
-            <option value='81-100' <?php if ($size == '100') echo 'selected'?>>81-100lbs.</option>
-            <option value='Over 100' <?php if ($size == '101') echo 'selected'?>>Over 100lbs.</option>
+            <option value='Up to 15'>up to 15 lbs.</option>
+            <option value='16-25'>16-25lbs.</option>
+            <option value='26-40'>26-40lbs.</option>
+            <option value='41-60'>41-60lbs.</option>
+            <option value='61-80'>61-80lbs.</option>
+            <option value='81-100'>81-100lbs.</option>
+            <option value='Over 100'>Over 100lbs.</option>
         </select>
 
         <label class='age'>Your Pet's Age:</label>
         <ul>
             <li>
-                <label><input type='checkbox' name='petAge'> Puppy</label>
+                <label><input type='checkbox' name='petAge' value='Puppy'>Puppy</label>
             </li>
             <li>
-                <label><input type='checkbox' name='petAge'> Adult</label>
+                <label><input type='checkbox' name='petAge' value='Adult'> Adult</label>
             </li>
             <li>
-                <label><input type='checkbox' name='petAge'> Senior</label>
+                <label><input type='checkbox' name='petAge' value='Senior'>Senior</label>
             </li>
         </ul>
         <input type='submit' value='Enter' id='submit'>
@@ -52,11 +52,13 @@ require 'logic.php'
     </form>
 
     <div id='results'>
-        <?php if (isset($petName)): ?>
+        <?php if (isset($petName, $size, $petAge)): ?>
             <div class='alert' role='alert'>
-                <p><?= $petName ?> is <?= $size ?> pounds, and he/she needs <?php $foodAmount ?> cups of food per day.</p>
-            </div>
+                <p><?= $petName ?>  is a <?= $petAge ?> and is <?= $size ?> pounds. He/she needs <?= $foodAmount ?> cups per day.</p>
         <?php endif; ?>
+
+
+
     </div>
 
 
