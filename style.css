@@ -1,45 +1,45 @@
 body {
-font-family: 'Arvo';
+    font-family: 'Arvo', sans-serif;
 }
 
 .container {
-background-color: #e3e3e3;
-max-width: 600px;
-margin: auto;
-text-align: center;
+    background-color: #e3e3e3;
+    max-width: 600px;
+    margin: auto;
+    text-align: center;
 }
 
 form ul li {
-list-style-type: none;
+    list-style-type: none;
 }
 
 label {
-display: block;
-}
-
-.alert {
-background-color: #fafafa;
+    display: block;
 }
 
 input, select {
-margin-bottom: 10px;
-margin-top: 10px;
+    margin-bottom: 10px;
+    margin-top: 10px;
 }
 
-
 img {
-max-width: 150px;
-margin-top: 50px;}
+    max-width: 150px;
+    margin-top: 50px;
+}
 
-
+.alert {
+    background-color: #555555;
+    color: #ffffff;
+    padding: 15px;
+}
 
 #submit {
-width: 30%;
-margin: auto;
-margin-bottom: 25px;
-padding: 10px;
-background-color: #014411;
-color: #e3e3e3;
-font-size: 20px;
-font-family: 'Arvo';
+    width: 30%;
+    margin: auto;
+    margin-bottom: 25px;
+    padding: 10px;
+    background-color: #014411;
+    color: #e3e3e3;
+    font-size: 20px;
+    font-family: 'Arvo', sans-serif;
 }

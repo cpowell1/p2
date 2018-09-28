@@ -7,6 +7,7 @@ if (isset($_SESSION['results'])) {
     $petName = $results['petName'];
     $size = $results['size'];
     $petAge = $results['petAge'];
+    $result = $results['result'];
 }
 
 session_unset();
