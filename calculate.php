@@ -9,9 +9,15 @@ use DWA\Form;
 
 $form = new Form($_GET);
 
-$petName = $form-> get('petName');
-$size = $form-> get('size');
-$petAge = $form-> get('petAge');
+$petName = $form->get('petName');
+$size = $form->get('size');
+$petAge = $form->get('petAge');
+
+$errors = $form->validate([
+    'petName' => 'required|alpha',
+    'size' => 'required',
+    'petAge' => 'required',
+]);
 
 $dogs = [
     'Puppy' => [
@@ -42,14 +48,17 @@ $dogs = [
         '101' => '5.5'
     ],
 ];
-
-$result = $dogs[$petAge][$size];
+if (!$form->hasErrors) {
+    $result = $dogs[$petAge][$size];
+}
 
 $_SESSION['results'] = [
     'petName' => $petName,
     'size' => $size,
     'petAge' => $petAge,
     'result' => $result,
+    'errors' => $errors,
+    'hasErrors' => $form->hasErrors,
 ];
 
 header('Location: index.php');

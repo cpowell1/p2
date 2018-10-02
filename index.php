@@ -49,16 +49,28 @@ require 'logic.php'
         </ul>
         <input type='submit' value='Enter' id='submit'>
 
+        <?php if ($hasErrors): ?>
+            <ul>
+                <div class='error-alert'>
+                    <?php foreach ($errors as $error): ?>
+                        <li><?= $error ?></li>
+                    <?php endforeach; ?>
+                </div>
+            </ul>
+        <?php endif; ?>
     </form>
 
+
+    <?php if (!$hasErrors): ?>
     <div id='results'>
         <?php if (isset($petName, $size, $petAge)): ?>
         <div class='alert' role='alert'>
-            <p><?= $petName ?> is a <?= $petAge ?> and is <?= $size ?> pounds. He/she needs <?= $result ?> of food per day.</p>
+            <p><?= $petName ?> is a <?= $petAge ?> and is <?= $size ?> pounds. He/she needs <?= $result ?> cup(s) of food per day.</p>
             <?php endif; ?>
         </div>
 
-
+        <?php endif; ?>
     </div>
+
 </body>
 </html>
