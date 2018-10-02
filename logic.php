@@ -3,6 +3,10 @@
 session_start();
 
 $hasErrors = false;
+$petName = '';
+$size = 'choose';
+$petAge = 'Puppy';
+$result = '';
 
 if (isset($_SESSION['results'])) {
     $results = $_SESSION['results'];
