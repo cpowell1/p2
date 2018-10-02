@@ -25,7 +25,7 @@ require 'logic.php'
 
         <label for='size'>Select Your Pet's Size:</label>
         <select name='size' id='size'>
-            <option value='choose' <?php if ($size == 'choose') echo 'selected' ?>>Choose one...</option>
+            <option value=' ' <?php if ($size == ' ') echo 'selected' ?>>Choose one...</option>
             <option value='0-15' <?php if ($size == '0-15') echo 'selected' ?>>up to 15 lbs.</option>
             <option value='16-25' <?php if ($size == '16-25') echo 'selected' ?>>16-25lbs.</option>
             <option value='26-40' <?php if ($size == '26-40') echo 'selected' ?>>26-40lbs.</option>
@@ -68,7 +68,7 @@ require 'logic.php'
     </form>
 
 
-<?php if (!$hasErrors): ?>
+    <?php if (!$hasErrors): ?>
     <div id='results'>
         <?php if (isset($petName, $size, $petAge)): ?>
         <div class='alert' role='alert'>

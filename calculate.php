@@ -49,6 +49,7 @@ $dogs = [
         '101' => '5.5'
     ],
 ];
+
 if (!$form->hasErrors) {
     $result = $dogs[$petAge][$size];
 }

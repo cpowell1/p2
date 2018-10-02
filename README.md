@@ -3,16 +3,19 @@
 + Production URL: <http://p2.christianpowell.me>
 
 ## Outside resources
-*your list of outside resources go here*
+ * [How to Write Multi-Dimensional Array](https://daylerees.com/php-pandas-arrays/) I used this resource when I needed to write an array for my data about the dog's age and size.
+ * Class Notes
 
 ## 3 Unique inputs
-*You don't have to list all inputs, just 3 unique ones. The following is an example of what I'd put if my project was the xkcd Password Generator: (1) Text input to indicate number of words in password, (2) Checkbox to indicate whether to include a number (3) Dropdown to indicate what symbol to include*
+1. Text field to indicate the pet's name
+2. Dropdown to indicate the pet's weight
+3. Checkbox to indicate the pet's age
 
 ## Class
-*List the name of the class you're using, e.g. `Form.php`, `Password.php`, etc.*
+Form.php
 
 ## Code style divergences
-*list any divergences from PSR-1/PSR-2 and course guidelines on code style*
+ * No Divergence
 
 ## Notes for instructor
-*any notes for me to refer to while grading; if none, omit this section*
+Thank you for the help walking me through each of the issues I encountered. I validated the code with the W3C Validator, and there were errors shown, but it was the PHP it highlighted as an error. 
