@@ -15,7 +15,7 @@ require 'logic.php'
 
 <body>
 <div class='container'>
-    <img src='/images/nutro.png' alt='Dog Food'/>
+    <img src='images/nutro.png' alt='Dog Food'/>
     <h1>Nutro Dog Food Calculator</h1>
 
     <form method='GET' action='calculate.php'>

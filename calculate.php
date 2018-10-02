@@ -3,12 +3,15 @@
 session_start();
 
 require 'helpers.php';
+require 'Form.php';
 
-$petName = $_GET['petName'];
+use DWA\Form;
 
-$size = $_GET['size'];
+$form = new Form($_GET);
 
-$petAge = $_GET['petAge'];
+$petName = $form-> get('petName');
+$size = $form-> get('size');
+$petAge = $form-> get('petAge');
 
 $dogs = [
     'Puppy' => [
