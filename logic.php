@@ -3,7 +3,6 @@
 session_start();
 
 $hasErrors = false;
-$result = true;
 
 if (isset($_SESSION['results'])) {
     $results = $_SESSION['results'];
